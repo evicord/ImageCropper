@@ -1,5 +1,5 @@
 # ImageCropper
-## cordova 图片裁剪插件
+### cordova 图片裁剪插件
 
 ### 1.准备工作
 		1. 添加平台
