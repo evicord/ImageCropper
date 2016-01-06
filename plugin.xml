@@ -10,7 +10,11 @@
 				<param name="android-package" value="com.tyrion.plugin.cropper.imageCropper" />
 			</feature>
 		</config-file>
-		<config-file parent="/*" target="AndroidManifest.xml" />
+
+		<config-file target="AndroidManifest.xml" parent="/manifest">
+            <!-- Required  本地储存写入权限-->
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        </config-file>
 
 		<source-file src="src/android/image_cropper_lib.jar" target-dir="libs"/>
 		<source-file src="src/android/imageCropper.java" target-dir="src/com/tyrion/plugin/cropper/imageCropper" />
