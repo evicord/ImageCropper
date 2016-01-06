@@ -27,11 +27,13 @@
     git clone https://github.com/evicord/ImageCropper.git
     cordova plugin add $IMAGE_CROPPER_PLUGIN_DIR
     
-### 3.调用方法
-传入参数：
+### 3.使用方法
+1).  传入参数：
 
 	sourceType 获取图片方式，0为相册，1为相机
 	outputSize 输出图片尺寸数组格式 [width,height]
+
+2).  调用方法
 
 方法一： 通过中间层js文件调用
 	
