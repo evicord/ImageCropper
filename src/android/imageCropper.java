@@ -26,7 +26,7 @@ public class imageCropper extends CordovaPlugin implements CropHandler {
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-        if (action.equals("cropFromGallery")) {
+        if (action.equals("crop")) {
             mCropParams = new CropParams();
             callback = callbackContext;
             int sourceType = args.getInt(0);
@@ -47,11 +47,11 @@ public class imageCropper extends CordovaPlugin implements CropHandler {
             Intent intent;
             int request;
             switch (sourceType){
-                case 1:
+                case 0:
                     intent = CropHelper.buildGalleryIntent(mCropParams);
                     request = CropHelper.REQUEST_CROP;
                     break;
-                case 0:
+                case 1:
                     intent = CropHelper.buildCameraIntent(mCropParams);
                     request = CropHelper.REQUEST_CAMERA;
                     break;
