@@ -24,7 +24,7 @@
 使用git命令将ImageCropper phonegap插件下载的本地,将这个目录标记为`$IMAGE_CROPPER_PLUGIN_DIR`
 
 
-    git clone https://github.com/jpush/jpush-phonegap-plugin.git
+    git clone https://github.com/evicord/ImageCropper.git
     cordova plugin add $IMAGE_CROPPER_PLUGIN_DIR
     
 ### 3.调用方法
