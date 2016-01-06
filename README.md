@@ -47,7 +47,7 @@
 		);
 	});
 	
-方法二：直接调native方法
+方法二：直接调用native方法
 
 	cordova.exec(
 		function(successData) {
