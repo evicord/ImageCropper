@@ -95,7 +95,8 @@
     image=[Operation scaleToSize:image size:self.imageSize];
     NSData *data=UIImageJPEGRepresentation(image, 0.9f);
     NSString* tmpPath =[Operation tmpImagesDirectoryPath];
-    NSString *filePath=[NSString stringWithFormat:@"%@/%@", tmpPath, @"tmpImage"];
+    NSDate *date=[NSDate date];
+    NSString *filePath=[NSString stringWithFormat:@"%@/%ld_%@", tmpPath,(long)date.timeIntervalSince1970,@"tmpImage"];
     NSError* err = nil;
     CDVPluginResult *pluginResult = nil;
     if(![data writeToFile:filePath options:NSAtomicWrite error:&err])
