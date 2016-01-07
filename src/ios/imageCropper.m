@@ -14,7 +14,7 @@
 @interface imageCropper()<UINavigationControllerDelegate,UIImagePickerControllerDelegate,MLImageCropDelegate>
 @property (nonatomic,assign) BOOL isEdit;
 @property (nonatomic,assign) CGSize imageSize;
-@property (nonatomic,weak) CDVInvokedUrlCommand* command;
+@property (nonatomic,strong) CDVInvokedUrlCommand* command;
 @end
 
 @implementation imageCropper
