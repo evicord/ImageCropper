@@ -20,11 +20,15 @@
 		<source-file src="src/android/imageCropper.java" target-dir="src/com/tyrion/plugin/cropper/imageCropper" />
 	</platform>
 	<platform name="ios">
-		<config-file parent="/*" target="config.xml">
-			<feature name="imageCropper">
-				<param name="ios-package" value="imageCropper" />
-			</feature>
-		</config-file>
-		<source-file src="src/ios/imageCropper.m" />
+        <config-file target="config.xml" parent="/*">
+            <feature name="imageCropper">
+                <param name="ios-package" value="imageCropper"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/imageCropper.h"/>
+        <source-file src="src/ios/imageCropper.m"/>
+        <header-file src="src/ios/MLImageCrop.h"/>
+        <source-file src="src/ios/MLImageCrop.m"/>
 	</platform>
 </plugin>
+
