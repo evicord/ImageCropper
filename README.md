@@ -31,6 +31,7 @@
 1).  传入参数：
 
 	sourceType 获取图片方式，0为相册，1为相机
+	isEdit 是否裁剪图片，true裁剪，false不裁剪
 	outputSize 输出图片尺寸数组格式 [width,height]
 
 2).  调用方法
@@ -39,7 +40,7 @@
 	
 	document.addEventListener('deviceready', function() {
 		var location = cordova.require('com.tyrion.plugin.cropper.imageCropper');
-		location.crop(sourceType, outputSize,
+		location.crop(sourceType, isEdit, outputSize,
 			function(successData) {
 				//这里处理成功回调的数据
 			},
@@ -60,5 +61,5 @@
 		},
 		"imageCropper",
 		"crop",
-		[sourceType, outputSize]
+		[sourceType, isEdit, outputSize]
 	);
