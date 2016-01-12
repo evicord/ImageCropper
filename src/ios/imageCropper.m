@@ -10,7 +10,8 @@
 #import "AppDelegate.h"
 #import "MainViewController.h"
 #import "MLImageCrop.h"
-
+#import "DeviceMacro.h"
+#import "Operation.h"
 @interface imageCropper()<UINavigationControllerDelegate,UIImagePickerControllerDelegate,MLImageCropDelegate>
 @property (nonatomic,assign) BOOL isEdit;
 @property (nonatomic,assign) CGSize imageSize;
