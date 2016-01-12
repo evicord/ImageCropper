@@ -27,17 +27,18 @@ public class imageCropper extends CordovaPlugin implements CropHandler {
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if (action.equals("crop")) {
-            mCropParams = new CropParams();
+            mCropParams = new CropParams(this.cordova.getActivity());
             callback = callbackContext;
             int sourceType = args.getInt(0);
-            JSONArray size = args.getJSONArray(1);
+            boolean isEdit = args.getBoolean(1);
+            JSONArray size = args.getJSONArray(2);
             int outputWidth = size.getInt(0);
             int outputHeight = size.getInt(1);
-            Log.e("width", outputWidth + "");
-            Log.e("height", outputHeight + "");
+//            Log.e("width", outputWidth + "");
+//            Log.e("height", outputHeight + "");
 
             mCropParams.refreshUri();
-            mCropParams.enable = true;
+            mCropParams.enable = isEdit;
             mCropParams.compress = false;
             mCropParams.aspectX = outputWidth;
             mCropParams.aspectY = outputHeight;
@@ -74,7 +75,7 @@ public class imageCropper extends CordovaPlugin implements CropHandler {
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        Log.e(TAG, "onActivityResult");
+//        Log.e(TAG, "onActivityResult");
         CropHelper.handleResult(this, requestCode, resultCode, data);
         if (requestCode == 1) {
             Log.e(TAG, "");
@@ -83,12 +84,14 @@ public class imageCropper extends CordovaPlugin implements CropHandler {
 
     @Override
     public void onPhotoCropped(Uri uri) {
-        Log.d(TAG, "Crop Uri in path: " + uri.getPath());
+//        Log.d(TAG, "Crop Uri in path: " + uri.getPath());
         callback.success(uri.getPath());
+
     }
 
     @Override
     public void onCompressed(Uri uri) {
+//        Log.d(TAG, "Compressed Uri in path: " + uri.getPath());
     }
 
     @Override

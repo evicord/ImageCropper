@@ -16,8 +16,8 @@
             <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
         </config-file>
 
-		<source-file src="src/android/image_cropper_lib.jar" target-dir="libs"/>
-		<source-file src="src/android/imageCropper.java" target-dir="src/com/tyrion/plugin/cropper/imageCropper" />
+		<source-file src="src/android/image-cropper-lib.jar" target-dir="libs"/>
+		<source-file src="src/android/imageCropper.java" target-dir="src/com/tyrion/plugin/cropper" />
 	</platform>
 	<platform name="ios">
         <config-file target="config.xml" parent="/*">
