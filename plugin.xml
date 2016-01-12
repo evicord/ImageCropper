@@ -29,6 +29,8 @@
         <source-file src="src/ios/imageCropper.m"/>
         <header-file src="src/ios/MLImageCrop.h"/>
         <source-file src="src/ios/MLImageCrop.m"/>
+        <header-file src="src/ios/Operation.h"/>
+        <source-file src="src/ios/Operation.m"/>
 	</platform>
 </plugin>
 
