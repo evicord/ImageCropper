@@ -106,8 +106,7 @@
     }
     else
     {
-        NSURL*url=[NSURL fileURLWithPath:filePath];
-        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:url.absoluteString];
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:filePath];
     }
     [self.commandDelegate sendPluginResult:pluginResult callbackId:self.command.callbackId];
 }
