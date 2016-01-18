@@ -93,6 +93,7 @@
 
 -(void)addImage:(UIImage*)image
 {
+    [Operation createDirectory];
     image=[Operation scaleToSize:image size:self.imageSize];
     NSData *data=UIImageJPEGRepresentation(image, 0.9f);
     NSString* tmpPath =[Operation tmpImagesDirectoryPath];
